@@ -15,7 +15,7 @@ namespace pr8
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Практическая работа №8.\nЗдравствуйте!");
 
-            for (;;)
+            while (true)
             {
                 try
                 {
@@ -31,9 +31,9 @@ namespace pr8
                     {
                         Console.WriteLine("Введите пределы отрезка.");
                         Console.Write("От:");
-                        double x = Convert.ToInt32(Console.ReadLine());
+                        double x = Convert.ToDouble(Console.ReadLine());
                         Console.Write("До:");
-                        double end = Convert.ToInt32(Console.ReadLine());
+                        double end = Convert.ToDouble(Console.ReadLine());
                         double step = 0.5;
 
                         Console.ForegroundColor = ConsoleColor.Green;
@@ -46,7 +46,7 @@ namespace pr8
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine($" {x,4} | {y,6}"); // вывод значения x и y на консоль
                             Console.ForegroundColor = ConsoleColor.White;
-                            x += step; // увеличение значения x на шаг (step)
+                            x += step; // увеличение значения x на шаг
                         } while (x <= end); // выполнение цикла do while до тех пор, пока x не станет больше end
                     }
                     else // иначе
